@@ -1,0 +1,186 @@
+@use "../../utils/index" as utils;
+
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+   
+       
+    .logo-container{
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+        align-self: center;
+
+        @include utils.breakpoint(medium){
+            padding-top: 0;
+        }
+    }
+
+    &__line{
+        display: none;
+    }
+    
+    .navigation-container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 2.3rem;
+      
+        .navbar-icon{
+            margin-right: 1.5rem;
+            align-self: flex-end;
+
+            @include utils.breakpoint(medium){
+                display: none;
+            }
+        }
+
+        .close-icon{
+            display: none;
+        }
+
+        .nav-links-container{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 3rem;
+            flex-wrap: nowrap;
+           
+            .nav-link{
+                color: utils.$white;
+                padding: 1rem 0;
+                margin-left: 2rem;
+                letter-spacing: var(--navtext-spacing);
+                font-family: var(--barlow-condensed-family);
+                text-transform: uppercase;
+                font-size: var(--subheading-two-fontsize);
+                
+                
+                span{
+                    margin-right: 0.75rem;
+                    font-weight: bold;
+
+                }
+            }
+
+            .nav-link:hover{
+                border-bottom: 3px solid rgba(151, 151, 151, 0.5);
+            }
+
+            .active{
+                border-bottom: 3px solid utils.$white;
+            }
+
+            @include utils.breakpoint(small){
+                display: none;
+            }
+
+            @include utils.breakpoint(medium){
+                display: flex !important;
+                flex-direction: row;
+                margin: 0 1.5rem;
+                
+                span{
+                    display: none;
+                }
+
+                .nav-link{
+                    padding-bottom: 2.5rem;
+                    margin-left: 3rem;
+                }
+
+                .nav-link:nth-of-type(1){
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+            }
+
+            @include utils.breakpoint(large){ 
+                padding: 0 3.75rem;
+
+                .nav-link{
+                    margin-left: 4rem;
+                    flex-shrink:0;
+                }
+
+                .nav-link:nth-of-type(1){
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+
+                span{
+                    display: inline;
+                }
+            }
+
+            @include utils.breakpoint(xLarge){ 
+                padding: 0 5rem;
+            }
+            
+
+
+        }
+        @include utils.breakpoint(medium){
+            padding: 2rem 2rem;
+            padding-bottom: 0;
+
+            background-color: utils.$nav-background;
+            backdrop-filter: blur(40px);
+        }
+    }
+
+    .toggled{
+        height: 100vh;
+        width: 65%;
+        background-color: utils.$nav-background;
+        backdrop-filter: blur(40px);
+        position: fixed;
+        right: 0;
+
+        animation: open-mobile-nav-animate 1s ease-in-out;
+
+        @keyframes open-mobile-nav-animate {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 65%;
+            }
+        }
+    }
+
+    .hidden{
+        display: none !important;
+    }  
+
+    @include utils.breakpoint(medium){
+        .logo-container{
+            padding-left: 2.5rem;
+        }
+    }
+
+    @include utils.breakpoint(large){ 
+        margin-top: 3rem;
+        
+        &__line{
+            display: block;
+            width: 40%;
+            position: sticky;
+            align-self: center;
+            z-index: 2;
+            left: 10%;
+            border: 1px solid rgba(151, 151, 151, 0.2);
+        }
+
+        .logo-container{
+            padding-left: 4rem;
+        }
+
+    }
+
+    @include utils.breakpoint(xLarge){ 
+        &__line{
+            width: 45%;
+        }
+    }
+}

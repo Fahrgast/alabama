@@ -1,0 +1,51 @@
+@use "../../../utils/index" as utils;
+
+.slider{
+    text-align: center;
+    margin: auto;
+
+    .slider-content{
+        &__subheading{
+            text-transform: uppercase;
+            font-family: var(--bellefair-family);
+            margin: 0;
+        }
+
+        &__subheading-crew{
+            color: rgba(255,255,255,0.5);
+        }
+
+        &__subheading-technology{
+            font-family: var(--barlow-condensed-family);
+            letter-spacing: var(--subheading-two-spacing);
+        }
+
+        &__heading{
+            margin: 0;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        @include utils.breakpoint(large){
+            width: 100%;
+
+            .slider-content__subheading{
+                font-size: var(--heading-five-fontsize);
+            }
+
+            .slider-content__heading{
+                font-size: var(--heading-three-fontsize);
+            }
+        }
+    }
+
+    @include utils.breakpoint(large){
+        width: 100%;
+    }
+    
+
+}
+
+.slider-active{
+    background-color: utils.$white !important;
+}

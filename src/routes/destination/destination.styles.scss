@@ -1,0 +1,100 @@
+@use '../../utils/index' as utils;
+
+.destination-background{
+    background-image: url(../../assets/destination/background-destination-mobile.jpg);
+
+    @include utils.breakpoint(medium){
+        background-image: url(../../assets/destination/background-destination-tablet.jpg);
+    }
+    
+    @include utils.breakpoint(large){
+        background-image: url(../../assets/destination/background-destination-desktop.jpg);
+    }
+}
+
+.destination-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    width: 85%;
+    margin: auto;
+    
+
+    .slider-image{
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    .slider-content{
+        @include utils.breakpoint(large){
+            flex: 2;
+            text-align: left;
+            width: 90%;
+            margin-right: auto;
+        } 
+    }
+
+    .slider-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-right: auto;
+
+        @include utils.breakpoint(medium){
+            width: 60%;
+            margin: auto;
+        } 
+
+        @include utils.breakpoint(large){
+            width: 60%;
+            justify-content: flex-start;
+            margin-right: 1rem;
+            margin: 0;
+        } 
+    }
+
+    .slider-item{
+        color: utils.$light-violet;
+        letter-spacing: var(--subheading-two-spacing);
+        padding-bottom: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        
+        @include utils.breakpoint(large){
+            margin-right: 1rem;
+        } 
+    }
+
+    .slider-item:nth-of-type(1){
+        margin-left: 0;
+    }
+
+    .slider-menu:hover{
+        border-bottom: 3px solid rgba(151, 151, 151, 0.5);
+    }
+
+    .slider-destination-active{
+        color: utils.$white;
+        border-bottom: 3px solid utils.$white;
+    }
+
+    @include utils.breakpoint(large){
+        width: 80%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 5rem;
+        margin-top: 1rem;
+
+        justify-content: flex-start;
+        gap: 10%;
+
+        .slider-image{
+            max-width: 50%;
+        }
+
+    } 
+}

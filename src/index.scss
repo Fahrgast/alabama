@@ -1,0 +1,58 @@
+@use './utils/index' as utils;
+@use './utils/fonts';
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 16px;
+
+  background-image: url("./assets/home/background-home-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a, a:visited, a:active{
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1{
+  font-size: var(--heading-fontsize);
+}
+h2{
+  font-size: var(--heading-two-fontsize);
+}
+h3{
+  font-size: var(--heading-three-fontsize);
+}
+h4{
+  font-size: var(--heading-four-fontsize);
+}
+h5{
+  font-size: var(--heading-five-fontsize);
+  letter-spacing: var(--heading-five-spacing);
+}
+
+h1, h2, h3, h4, h5{
+  color: utils.$white;
+  font-family: var(--bellefair-family);
+  font-weight: 400;
+}
+
+p{
+  color: utils.$light-violet;
+  font-family: var(--barlow-family);
+  font-size: var(--text-fontsize);
+  line-height: var(--text-lineheight);
+}

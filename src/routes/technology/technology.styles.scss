@@ -1,0 +1,123 @@
+@use "../../utils/index" as utils;
+
+.technology{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    .slider-image{
+        width: 101%;
+        position: relative;
+        right: 0;
+        margin: 0;
+    }
+
+    .slider-numbers{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+
+        .slider-number{
+            border: 1px solid rgba(255,255,255, 0.2);
+            border-radius: 50%;
+            background-color: transparent;
+            color: utils.$white;
+            height: 40px;
+            width: 40px;
+            margin-left: 1rem;
+            cursor: pointer;
+            font-family: var(--bellefair-family);
+            font-size: var(--heading-four-fontsize);
+            text-align: center;
+
+
+            @include utils.breakpoint(medium){
+                height: 60px;
+                width: 60px;
+            }
+
+            @include utils.breakpoint(large){
+                height: 80px;
+                width: 80px;
+            }
+        }
+
+        .slider-number:nth-of-type(1){
+            margin-left: 0;
+        }
+
+        .slider-number:hover{
+            border-color: utils.$white;
+        }
+
+        .slider-active{
+            color: black;
+        }
+    }
+
+    .terminology{
+        text-align: center;
+        letter-spacing: var(--subheading-two-spacing);
+        font-family: var(--barlow-condensed-family);
+    }
+
+    .slider-content{
+        width: 90%;
+        margin: auto;
+
+        @include utils.breakpoint(medium){
+            width: 80%;
+            text-align: left;
+        }
+    }
+
+    .technology-container{
+        @include utils.breakpoint(large){
+            display: flex;
+            flex-direction: row-reverse;
+            margin-left: auto;
+
+            .slider-image{
+                width: 50%;
+            }
+        
+            .slider-numbers{
+                order: 1;
+                flex-direction: column;
+            
+                .slider-number{
+                    margin: 0;
+                    margin-bottom: 1rem;
+                }
+            }
+            .terminology{
+                text-align: left;
+                width: 80%;
+                margin: auto;
+            }
+
+        }
+    }
+    @include utils.breakpoint(large){
+        padding-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-left: 10%;
+    }
+}
+
+.technology-background{
+    background-image: url(../../assets/technology/background-technology-mobile.jpg);
+
+    @include utils.breakpoint(medium){
+        background-image: url(../../assets/technology/background-technology-tablet.jpg);
+    }
+    
+    @include utils.breakpoint(large){
+        background-image: url(../../assets/technology/background-technology-desktop.jpg);
+    }
+}

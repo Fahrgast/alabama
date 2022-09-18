@@ -1,0 +1,87 @@
+@use "../../utils/index" as utils;
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+
+    .hero{
+        &__subheading{
+            color: utils.$light-violet;
+            letter-spacing: var(--heading-five-spacing);
+        }
+
+        &__heading{
+            margin: 0;
+        }
+
+        &__button{
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+            margin-top: 3rem;
+            cursor: pointer;
+            letter-spacing: var(--subheading-two-spacing);
+            border: 1px solid black;
+        }
+
+        &__button:hover{
+            outline: 50px solid rgba(151, 151, 151, 0.15);
+        }
+    }
+    
+    @include utils.breakpoint(medium){
+        width: 57%;    
+        
+        .hero__button{
+            margin-top: 6rem;
+            height: 242px;
+            width: 242px;
+        }
+    }
+
+    @include utils.breakpoint(large){
+        flex-direction: row;    
+        width: 90%;   
+        text-align: left;
+        align-items: center;
+        height: 100vh;
+        margin-top: 0;
+
+        .hero{
+            max-width: 50%;
+
+            &__text{
+                max-width: 90%;
+            }
+        }
+    }
+
+    @include utils.breakpoint(xLarge){
+        .hero__text{
+            max-width: 60%;
+        }
+    }
+}
+
+.home-background{
+    background-image: url(../../assets/home/background-home-mobile.jpg);
+
+    @include utils.breakpoint(medium){
+        background-image: url(../../assets/home/background-home-tablet.jpg);
+    }
+    
+    @include utils.breakpoint(large){
+        background-image: url(../../assets/home/background-home-desktop.jpg);
+    }
+}
+
+
+
+
+

@@ -1,0 +1,39 @@
+@use '../../../../utils/index' as utils;
+
+.location-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .location{
+         &__description{
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            color: utils.$light-violet;
+            font-family: var(--barlow-condensed-family);
+            font-size: var(--subheading-two-fontsize);
+            letter-spacing: var(--subheading-two-spacing);
+        }
+
+        &__value{
+            margin: 0;
+            text-transform: uppercase;
+            padding-bottom: 1rem;
+        }
+    }
+
+    @include utils.breakpoint(medium){
+        flex-direction: row;
+        gap: 7rem;
+    } 
+
+    @include utils.breakpoint(large){
+        justify-content: space-between;
+        gap: 3rem;
+    } 
+
+    @include utils.breakpoint(xLarge){
+        gap: 5rem;
+    } 
+}

@@ -1,0 +1,23 @@
+@use '../../utils/index' as utils;
+
+.page-title-container{
+    align-self: center;
+    text-align: center;
+    .page-title{
+        font-family: var(--barlow-condensed-family);
+
+        &__id{
+            margin-right: 1rem;
+            color: rgba(255,255,255, 0.25);
+        }
+    }
+
+    @include utils.breakpoint(medium){
+        align-self: flex-start;
+        text-align: left;
+    } 
+
+    @include utils.breakpoint(large){
+        width: 55%;
+    } 
+}

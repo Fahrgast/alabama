@@ -1,0 +1,25 @@
+$width-medium: 768px;
+$width-large: 992px;
+$width-xLarge: 1400rem;
+
+:export {
+    widthMedium: $width-medium;
+    widthLarge: $width-large;
+    widthXLarge: $width-xLarge;
+  }
+
+$breakpoints-up: (
+    "small": 0,
+    //768px
+    "medium": 48em,
+    //992px
+    "large": 62em,
+    //1400px
+    "xLarge": 87.5em,
+);
+
+@mixin breakpoint($size){
+    @media (min-width: map-get($breakpoints-up, $size)){
+        @content;
+    }
+}

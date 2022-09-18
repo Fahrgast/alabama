@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+// font-size: rem(30);
+@function rem($pixel){
+    // If $pixel has no unit divide $pixel by 16 to return rems
+    @if math.is-unitless($pixel){
+        //Divided by 16 as base unit for rem
+        @return math.div($pixel, 16) + rem;     
+    }
+    // else throw an error
+    @else{
+        @error 'Error - Rem function received value with unit'; 
+    }
+}
+
+
+   
