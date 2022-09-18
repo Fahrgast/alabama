@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alabama/static/css/main.90808220.css",
-    "main.js": "/alabama/static/js/main.dab23ad2.js",
+    "main.js": "/alabama/static/js/main.c77b3785.js",
     "static/js/787.e5372b0f.chunk.js": "/alabama/static/js/787.e5372b0f.chunk.js",
     "static/media/image-victor-glover.png": "/alabama/static/media/image-victor-glover.8a9a5424588b73ec61c2.png",
     "static/media/image-anousheh-ansari.png": "/alabama/static/media/image-anousheh-ansari.2d647128496ddc638acd.png",
@@ -32,11 +32,11 @@
     "static/media/icon-close.svg": "/alabama/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
     "static/media/icon-hamburger.svg": "/alabama/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
     "main.90808220.css.map": "/alabama/static/css/main.90808220.css.map",
-    "main.dab23ad2.js.map": "/alabama/static/js/main.dab23ad2.js.map",
+    "main.c77b3785.js.map": "/alabama/static/js/main.c77b3785.js.map",
     "787.e5372b0f.chunk.js.map": "/alabama/static/js/787.e5372b0f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.90808220.css",
-    "static/js/main.dab23ad2.js"
+    "static/js/main.c77b3785.js"
   ]
 }
