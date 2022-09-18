@@ -9,13 +9,13 @@ import Navigation from "./routes/navigation/navigation.component";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Navigation />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="destination" element={<Destination />} />
-        <Route path="crew" element={<Crew />} />
-        <Route path="technology" element={<Technology />} />
+        <Route path="/destination" element={<Destination />} />
+        <Route path="/crew" element={<Crew />} />
+        <Route path="/technology" element={<Technology />} />
       </Routes>
     </BrowserRouter>
   );

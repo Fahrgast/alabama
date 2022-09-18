@@ -51,6 +51,7 @@ const Navigation = () => {
                   className={({ isActive }) =>
                     isActive ? "nav-link active" : "nav-link"
                   }
+                  end
                   to={navitem.to}
                   key={navitem.id}
                 >
